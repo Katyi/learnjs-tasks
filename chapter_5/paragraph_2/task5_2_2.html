@@ -1,0 +1,12 @@
+<!-- Методы Math.round и toFixed, согласно документации, округляют до ближайшего целого числа: 
+0..4 округляется в меньшую сторону, тогда как 5..9 в большую сторону. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      let num = Math.round((6.35 * 10).toFixed(10)) / 10;
+      alert('Округление числа 6.35 через toFixed и Math.round = ' + num);
+    </script>
+  </body>
+</html>

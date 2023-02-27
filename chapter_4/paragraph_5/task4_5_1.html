@@ -1,0 +1,21 @@
+<!-- Возможно ли создать функции A и B, чтобы new A() == new B()? -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      const globalObj = {};
+      function A() {
+        return globalObj;
+      }
+      function B() {
+        return globalObj;
+      }
+
+      let a = new A();
+      let b = new B();
+
+      alert( a == b ); // true
+    </script>
+  </body>
+</html>

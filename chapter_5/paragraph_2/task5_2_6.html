@@ -1,0 +1,17 @@
+<!-- Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+Любое число из интервала min..max должно появляться с одинаковой вероятностью. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      const random = (min, max) => {
+        let num = Math.floor(min + (max - min + 1) * Math.random());
+        return num;
+      }
+      alert('Случайное число ' + random(1, 5));
+      alert('Случайное число ' + random(1, 5));
+      alert('Случайное число ' + random(1, 5));
+    </script>
+  </body>
+</html>

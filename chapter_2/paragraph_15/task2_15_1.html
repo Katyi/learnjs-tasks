@@ -1,0 +1,31 @@
+<!-- Следующая функция возвращает true, если параметр age больше 18.
+В ином случае она запрашивает подтверждение через confirm и возвращает его результат -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      let age = prompt("Введите возраст", "");
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        } else {
+          // ...
+          return confirm('Родители разрешили?');
+        }
+      }
+      checkAge(age);
+
+      function checkAge1(age) {
+        if (age > 18) {
+          return true;
+        }
+        // ...
+        return confirm('Родители разрешили?');
+      }
+      checkAge1(age);
+      // Не отличается
+    </script>
+  </body>
+</html>
+
