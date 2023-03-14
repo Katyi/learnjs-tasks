@@ -1,0 +1,54 @@
+<!-- Создать меню, которое по нажатию открывается либо закрывается:
+P.S. HTML/CSS исходного документа можно и нужно менять. -->
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin-top: 60px;
+        margin-left: 500px;
+      }
+      .menu ul {
+        margin: 10px;
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+      }
+      .menu .title {
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .menu .title::before {
+        content: '▶ ';
+        font-size: 100%;
+        color: red;
+      }
+      .menu.open .title::before {
+        content: '▼ ';
+      }
+      .menu.open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sweeties" class="menu">
+      <span class="title" onclick="openMenu()">Сладости (нажми меня)!</span>
+      <ul>
+        <li>Пирожное</li>
+        <li>Пончик</li>
+        <li>Мёд</li>
+      </ul>
+    </div>
+    <script>
+      function openMenu() {
+        let menu = document.getElementById('sweeties');
+        let title = menu.querySelector('.title');
+        menu.classList.toggle('open');
+      }
+    </script>
+  </body>
+</html>

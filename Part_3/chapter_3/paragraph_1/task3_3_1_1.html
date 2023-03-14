@@ -29,7 +29,7 @@
             name: data.name,
             location: data.location,
           });
-          console.log(usersinfo[i].login, usersinfo[i].name, usersinfo[i].location )
+          alert(usersinfo[i].login + ' ' + usersinfo[i].name + ' ' + usersinfo[i].location )
           i++;
         })
       }
@@ -37,7 +37,6 @@
     }
     let names = ['mojombo', 'katyi', 'test'];
     let users = getUsers(names);
-    console.log(users.array)
   </script>
 </body>
 </html>

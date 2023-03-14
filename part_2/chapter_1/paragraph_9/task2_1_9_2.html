@@ -1,0 +1,43 @@
+<!-- Напишите код, который возвращает ширину стандартной полосы прокрутки.
+Для Windows она обычно колеблется от 12px до 20px. Если браузер не выделяет место под полосу прокрутки
+(так тоже бывает, она может быть прозрачной над текстом), тогда значение может быть 0px.
+P.S. Ваш код должен работать в любом HTML-документе, независимо от его содержимого. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+      #main {
+        width: 600px;
+        height: 600px;
+        margin: 0px auto;
+        background-color: lightgray;
+      }
+      p {
+        color: red;
+      }
+    </style>
+    <div id="main">
+      <h1>бла бла бла бла</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Iure impedit corrupti reprehenderit odit? Provident reiciendis tenetur optio ad exercitationem, 
+        ipsum veniam! Dolorem unde, earum ad amet pariatur laudantium quia animi magnam, optio quam aliquam commodi, 
+        error sed debitis odio enim reprehenderit? Ex natus odit dolore nemo quisquam! Deserunt, laborum quos, ratione, 
+        pariatur voluptatibus culpa aliquam quia quae eius harum numquam. Sunt corporis aliquam est deleniti praesentium veniam 
+        optio. Alias rem, architecto perferendis error illum deleniti velit distinctio, vero asperiores nihil officia odio atque 
+        praesentium, quibusdam saepe consequatur. Iure, illo molestias. Voluptatibus nesciunt dolorem inventore ad aut, itaque eum. 
+        Sit, atque.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dicta autem nihil soluta rerum similique molestiae aut, 
+        quasi harum iste minus quibusdam, itaque voluptate est earum. Explicabo, necessitatibus nisi. Odit.
+      </p>
+    </div>
+    <script>
+      let elem = document.getElementById('main');
+      let scrollWidth = elem.offsetWidth - elem.clientWidth;
+      alert(scrollWidth);
+    </script>
+  </body>
+</html>
+

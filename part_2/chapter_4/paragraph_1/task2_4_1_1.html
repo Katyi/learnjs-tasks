@@ -1,0 +1,22 @@
+<!-- Имеется <select>
+Используя JavaScript:
+- Выведите значение и текст выбранного пункта.
+- Добавьте пункт: <option value="classic">Классика</option>.
+- Сделайте его выбранным. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <select id="genres">
+      <option value="rock">Рок</option>
+      <option value="blues" selected>Блюз</option>
+    </select>
+    <script>
+      let selected = genres.options[genres.selectedIndex];
+      alert( selected.value + ' ' +selected.text);
+      let newSelected = new Option("Классика", "classic");
+      genres.append(newSelected);
+      newSelected.selected = true;
+    </script>
+  </body>
+</html>
